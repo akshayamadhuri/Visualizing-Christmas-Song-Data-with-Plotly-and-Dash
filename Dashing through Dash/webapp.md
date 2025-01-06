@@ -28,6 +28,7 @@ app.run_server(debug=True, host='0.0.0.0', port=3000)
 This command starts our Dash app on localhost:3000, with the debug mode enabled for real-time feedback during development.
 
 ## Building the App Layout with HTML Components
+
 Dash uses HTML components to define the layout of your web application. These components closely mimic the traditional HTML tags used in web development. Here’s how to structure a simple HTML layout in Dash:
 
 ```Python
@@ -81,12 +82,14 @@ app.layout = html.Div([
 These components improve user interaction by enabling selections and input, making the dashboard responsive to user choices.
 
 ## Running and Interacting with Your Dash App
+
 Now that we have built our app layout with HTML and Core components, it’s time to run and interact with it. Use the following command to start your Dash application:
 
-Python
-Copy to clipboard
+```Python
+
 if __name__ == '__main__':
     app.run_server(debug=True, host='0.0.0.0', port=3000)
+```
 This command launches the app, and you can view it in your web browser. Interact with the Dropdown and RadioItems to experience dynamic changes within the app. The output of the above code will simulate the launching of a Dash web application, showcasing the Dropdown and RadioItems you've just integrated.
 
 This interaction demonstrates how Dash applications respond to user inputs, updating the app in real-time based on user selections.
