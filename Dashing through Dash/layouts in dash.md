@@ -32,6 +32,8 @@ app.layout = html.Div([
     ...
 ```
 In this structure, the html.Div components serve as sections. The header wraps within another html.Div to provide a setting for the title and paragraph text. This hierarchical structuring helps create a coherent dashboard layout.
+![image](https://github.com/user-attachments/assets/eb245154-b1b3-47e1-ae7a-1fcf842cc763)
+
 
 
 ## Styling with CSS and Color Themes
@@ -66,6 +68,7 @@ html.Div([
 ```
 Applying CSS styles not only enhances the visual aspect but also improves usability by making key elements stand out. The use of thematic coloring aligns with the holiday spirit, making the dashboard both intuitive and cheerful.
 
+![image](https://github.com/user-attachments/assets/a7540d07-c6e3-4290-a43c-17a6cbbb85da)
 
 
 ## Leveraging Flexbox for Responsive Design
@@ -153,6 +156,9 @@ html.Div([
 Putting it all together
 
 When all these components are put together, we start to see what the dashboard looks like!
+
+![image](https://github.com/user-attachments/assets/fd62b801-8770-485f-a735-eb7262c368dc)
+
 
 
 
