@@ -1,21 +1,21 @@
-Adding Interactivity with Dash Callbacks
-Topic Overview
-Hello! In today's lesson, we'll learn how to add interactivity to your Dash applications using callbacks. You will discover how Dash employs interactive components like buttons and dropdowns to dynamically update the app's display. By the end of this lesson, you'll understand how to create responsive dashboards that react to user input, enhancing the user experience.
+# Adding Interactivity with Dash Callbacks
 
-Dashboard Components
+
+## Dashboard Components
+
 Before we begin, let's talk about some components that will exist on our page:
 
-Song Dropdown: Allows users to select from multiple songs.
-Year Slider: Enables users to specify a year.
-Update Chart Button: Triggers a callback to process the selected song and year.
-Song Details: Displays the output results dynamically based on user interaction.
+`Song Dropdown`: Allows users to select from multiple songs.
+`Year Slider`: Enables users to specify a year.
+`Update Chart Button`: Triggers a callback to process the selected song and year.
+`Song Details`: Displays the output results dynamically based on user interaction.
 Let's look at them individually so we can understand them.
 
-Song Dropdown
+## Song Dropdown
 The Song Dropdown provides the user with the choice of multiple songs. When they select a song, the song-dropdown value state will get updated.
 
-Python
-Copy to clipboard
+```Python
+
 dcc.Dropdown(
     id='song-dropdown',
     options=[
@@ -25,11 +25,12 @@ dcc.Dropdown(
     ],
     value='All I Want for Christmas Is You'
 ),
+```
 Year Slider
 Similar, the Year Slider will allow the user to select the year which will be stored in the year-slider value state.
 
-Python
-Copy to clipboard
+```Python
+
 dcc.Slider(
     id='year-slider',
     min=1958,
