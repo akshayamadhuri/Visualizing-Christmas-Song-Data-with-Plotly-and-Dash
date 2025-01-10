@@ -1,6 +1,4 @@
-Hands-on Project: Visualizing Christmas Songs with Plotly and Dash
-Topic Overview
-In this lesson, we focus on leveraging the powerful libraries Plotly and Dash to create interactive data visualizations and dashboards. Our goal is to apply these tools to a themed dataset - Billboard Christmas Songs - providing a practical context for understanding fundamental data processing and visualization techniques. By the end of this lesson, you'll gain hands-on experience in preparing data, creating dynamic charts, enhancing visual appeal with thematic styling, and deploying these visualizations for interactive exploration.
+# Hands-on Project: Visualizing Christmas Songs with Plotly and Dash
 
 Dataset Preparation
 Welcome to this hands-on lesson where we'll dive into visualizing Christmas song data using Plotly and Dash. We'll start by preparing the dataset, which forms the backbone for any data visualization. Here, we will use the Billboard Christmas Songs dataset.
