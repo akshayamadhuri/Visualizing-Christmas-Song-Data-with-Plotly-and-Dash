@@ -1,20 +1,22 @@
-Setting Up the Environment
+# Setting Up the Environment
+
 Before diving into visualization, we must set up our environment. We'll begin by initializing a Dash application. Dash provides a simple way to build web applications with data visualization capabilities in Python. In our code, we use Dash to prepare the app and Plotly Express to create visualizations.
 
 Start by importing the necessary libraries and initializing the app:
 
-Python
-Copy to clipboard
+```Python
+
 from dash import Dash, html, dcc
 import plotly.express as px
 import pandas as pd
 
 # Initialize app
 app = Dash(__name__)
+```
 In practice, consistent visual design, such as color schemes, can significantly enhance the user experience. We employ a Christmas-themed color scheme to ensure visual cohesion throughout the dashboard, which consists of the iconic red, green, and white colors:
 
-Python
-Copy to clipboard
+```Python
+
 # Christmas color scheme
 COLORS = {
     'red': '#D42426',
@@ -22,6 +24,7 @@ COLORS = {
     'white': '#F8F9F9',
     'light_red': '#F6E7E7',
 }
+```
 The focus here is to establish the foundational structure and aesthetic of the dashboard before integrating complex data components.
 
 Creating a Simple Chart with Plotly
