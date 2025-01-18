@@ -131,11 +131,12 @@ As you can see, the search is functional now!
 
 
 
-Enhancing User Experience with Data Conditionally
+ ## Enhancing User Experience with Data Conditionally
+
 In the final touch, let's enhance the table's readability by using conditional styling. This feature highlights alternating rows using the Christmas color scheme to make data easy to read:
 
-Python
-Copy to clipboard
+```Python
+
 # Add this into your DataTable component
 dash_table.DataTable(
     ...
@@ -144,7 +145,11 @@ dash_table.DataTable(
         'backgroundColor': '#F6E7E7'  # Light red background for odd rows
     }]
 )
+```
 This not only visually appeals to your users but also aids in distinguishing rows, making data consumption more straightforward. Here we go, our final result looks amazing!
+
+![image](https://github.com/user-attachments/assets/a667f463-9ec3-479b-8f06-0afb78ef201a)
+
 
 
 
