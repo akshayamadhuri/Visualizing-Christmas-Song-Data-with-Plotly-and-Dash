@@ -15,10 +15,11 @@ yearly_stats = df.groupby('year').agg({
     'peak_position': 'min',
     'week_position': 'mean'
 }).round(2).reset_index()
+```
 Then, we define the layout with our Christmas header:
 
-Python
-Copy to clipboard
+```Python
+
 # Define layout
 app.layout = html.Div([
     # Header
@@ -33,13 +34,14 @@ app.layout = html.Div([
         'margin': '10px'
     })
 ])
+```
 Looking great so far!
 
-Extending Layout with Analysis Graphs
+## Extending Layout with Analysis Graphs
 Let's extend our Dash layout with two more analysis graphs and a statistics summary. Here we go:
 
-Python
-Copy to clipboard
+```Python
+
 # Trend Analysis Graphs
 html.Div([
     # Left graph - Song Count Trend
@@ -63,15 +65,17 @@ html.Div([
     'padding': '20px',
     'borderRadius': '10px'
 })
+```
 These metrics will help us get even more insights from our Christmas dataset in real time!
 
-Implementing Time-Based Filtering with RangeSlider
+## Implementing Time-Based Filtering with RangeSlider
+
 Now, let's start improving the dashboard by introducing a powerful feature: time-based filtering. The RangeSlider in Dash provides an intuitive way for users to select year ranges, focusing on specific periods of interest. A real-world analogy might be zooming in on particular decades to observe how musical tastes change over time.
 
 Here's how we add a RangeSlider to our dashboard:
 
-Python
-Copy to clipboard
+```Python
+
 # Time Filter Section in the Layout
 html.Div([
     html.Label('Select Time Period:'),
@@ -84,17 +88,19 @@ html.Div([
         step=1
     )
 ], style={'padding': '20px'})
-This RangeSlider allows users to select a year range, helping them narrow down data to specific periods. The marks represent decades, making it easier to identify broad trends. So far our dashboard is looking great!
+```
+This `RangeSlider` allows users to select a year range, helping them narrow down data to specific periods. The marks represent decades, making it easier to identify broad trends. So far our dashboard is looking great!
+
+![image](https://github.com/user-attachments/assets/70de4906-230b-49be-b621-85dc9a5e8365)
 
 
-
-Creating Trend Visualizations
-With the RangeSlider in place, we'll visualize trends within the selected time period. These visualizations will enable users to understand historical patterns and changes in Christmas music popularity.
+## Creating Trend Visualizations
+With the `RangeSlider` in place, we'll visualize trends within the selected time period. These visualizations will enable users to understand historical patterns and changes in Christmas music popularity.
 
 We'll start with a line graph to show the number of unique Christmas songs each year:
 
-Python
-Copy to clipboard
+```Python
+
 # Callback for updating trend graphs
 @callback(
     Output('trend-graph', 'figure'),
@@ -113,15 +119,16 @@ def update_analysis(years):
     trend_fig.update_traces(line_color=COLORS['red'])
     
     return trend_fig
+```
 This callback helps us implement the dashboard dynamic updates mechanism. As users adjust the RangeSlider, the graph refreshes to display the trend of Christmas songs over the newly selected time period.
 
-Designing and Implementing Statistical Summaries
+## Designing and Implementing Statistical Summaries
 Next, let's enhance our dashboard with analysis metrics graphs and statistical summaries, helping users quickly grasp key insights without diving deep into raw data.
 
 We'll update our previously defined update_analysis callback to recalculate and display average metrics such as the average number of songs per year, average chart positions, and highlight trends:
 
-Python
-Copy to clipboard
+```Python
+
 # Callback to update statistical summary
 @callback(
     [Output('trend-graph', 'figure'),
@@ -171,10 +178,14 @@ def update_analysis(years):
     ])
     
     return trend_fig, perf_fig, stats
+```
 These summaries distill extensive data into digestible insights, helping you identify patterns at a glance — imagine seeing a spike in song numbers during specific years and investigating further to uncover historical influences.
 
 Final Dashboard: The Outcome
 Here is what we get as a result of our hard work!
+
+![image](https://github.com/user-attachments/assets/fd333291-6c24-4af7-b940-0ba3c02f8e20)
+
 
 
 
